@@ -9,3 +9,7 @@ compile:
 
 run:
 	./test.exe
+
+test:
+	test.exe < in > myout
+	fc /a myout out
