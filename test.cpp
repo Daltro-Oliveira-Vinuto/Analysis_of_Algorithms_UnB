@@ -1,7 +1,7 @@
 // file used for test algorithms
 
 #include <iostream>
-#include "insertion_sort.cpp"
+#include "merge_sort.cpp"
 
 using namespace std;
 
@@ -10,13 +10,15 @@ void print_array(int* , int);
 int main() {
 	int test_array[5] = {5, 1, 3, 2, 4};
 
-	cout << "Before sort: ";
-	print_array(test_array, 5);
+	int size = sizeof(test_array)/sizeof(test_array[0]);
 
-	insertion_sort(test_array, 5);
+	cout << "Before sort: ";
+	print_array(test_array, size);
+
+	sort_by_merge(test_array, size);
 
 	cout << "After sort: ";
-	print_array(test_array, 5);
+	print_array(test_array, size);
 
 	return 0;
 }
