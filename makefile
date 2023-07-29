@@ -1,4 +1,4 @@
-all: clear compile run
+all: clear compile test
 
 
 clear:
@@ -12,4 +12,4 @@ run:
 
 test:
 	test.exe < in > myout
-	fc /a myout out
+	fc myout out

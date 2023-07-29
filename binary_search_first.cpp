@@ -1,6 +1,3 @@
-#include <bits/stdc++.h>
-
-using namespace std;
 typedef long long ll;
 
 ll binary_search_first(ll *array, ll key, ll low, ll high) {
@@ -19,29 +16,4 @@ ll binary_search_first(ll *array, ll key, ll low, ll high) {
 			return binary_search_first(array, key, low, half-1); 
 	}
 
-}
-
-int main() {
-	ll n, q;
-
-	scanf("%lld %lld", &n, &q);
-
-	ll array[n];
-
-	for(ll i = 0; i <n; i++) {
-		scanf("%lld", &array[i]);
-	}
-
-	for(ll i = 0; i <q; i++) {
-		ll value, state;
-
-		scanf("%lld", &value);
-
-		state = binary_search_first(array, value, 0, n-1);
-		
-		printf("%lld\n", state);
-	}
-
-
-	return 0;
 }
