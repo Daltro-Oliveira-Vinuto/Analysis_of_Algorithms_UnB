@@ -1,5 +1,7 @@
 typedef long long ll;
 
+// binary_search has O(log n) by the master method or
+// by the substitution method(using recursion-tree too)
 ll binary_search_first(ll *array, ll key, ll low, ll high) {
 	if (low > high) return -1;
 	else {
