@@ -29,8 +29,10 @@ void merge(int *array, int start, int half, int end) {
 
 }
 
-/* merge sort has O(nlogn) in the worst case by the master method or
-substituion method(using recursion-tree method too) */
+/* merge sort is O(nlogn) in the worst case by the master method or
+substituion method(using recursion-tree method too)
+T(n) = 2*T(n/2) + cn = O(nlogn) 
+*/
 
 void merge_sort(int* array, int start, int end) {
 	if (start == end) return;
