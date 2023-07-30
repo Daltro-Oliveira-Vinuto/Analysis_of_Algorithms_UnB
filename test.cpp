@@ -1,30 +1,18 @@
 #include <bits/stdc++.h>
-#include "binary_search_first.cpp"
+#include "factorial.cpp"
 
 using namespace std;
-
+typedef long long ll;
 
 int main() {
-	ll n, q;
+	
+	ll v, n;
 
-	scanf("%lld %lld", &n, &q);
+	scanf("%lld", &v);
 
-	ll array[n];
+	n = factorial(v);
 
-	for(ll i = 0; i <n; i++) {
-		scanf("%lld", &array[i]);
-	}
-
-	for(ll i = 0; i <q; i++) {
-		ll value, state;
-
-		scanf("%lld", &value);
-
-		state = binary_search_first(array, value, 0, n-1);
-		
-		printf("%lld\n", state);
-	}
-
+	printf("%lld\n", n);
 
 	return 0;
 }
