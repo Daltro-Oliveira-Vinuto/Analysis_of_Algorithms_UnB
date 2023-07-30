@@ -1,18 +1,14 @@
 #include <bits/stdc++.h>
-#include "factorial.cpp"
+#include "print_array_recursive.cpp"
 
 using namespace std;
 typedef long long ll;
 
 int main() {
-	
-	ll v, n;
+	ll size = 5;
+	ll array[] = {10, 20, 30, 40, 50};
 
-	scanf("%lld", &v);
-
-	n = factorial(v);
-
-	printf("%lld\n", n);
-
+	print_array(array, size);
+	print_array(array, size);
 	return 0;
 }

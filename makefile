@@ -1,4 +1,4 @@
-all: clear compile test
+all: clear compile run
 
 
 clear:
