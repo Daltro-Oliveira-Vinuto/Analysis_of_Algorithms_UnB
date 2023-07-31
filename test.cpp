@@ -1,14 +1,18 @@
 #include <bits/stdc++.h>
 #include "print_array_recursive.cpp"
+#include "fibonacci.cpp"
 
 using namespace std;
 typedef long long ll;
 
 int main() {
-	ll size = 5;
-	ll array[] = {10, 20, 30, 40, 50};
+	ll n, f;
 
-	print_array(array, size);
-	print_array(array, size);
+	n = 50;
+	for(ll i = 1; i <= n; i++) {
+		f = fibonacci_linear(i);
+		printf("%lld\n", f);
+	}
+
 	return 0;
 }
