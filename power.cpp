@@ -25,6 +25,7 @@ ll pow_slow_recursive(ll n, ll e) {
 
 // the complexity is O(logn) by the master method
 // because T(n) = T(n/2) + O(1) = O(log n)
+// the algorithm use divide and Conquer(and Combine)
 ll pow(ll n, ll e) {
 	if (e == 0) return 1;
 	else if (e == 1) return n;

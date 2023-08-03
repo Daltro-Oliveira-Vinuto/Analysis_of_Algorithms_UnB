@@ -1,18 +1,52 @@
 #include <bits/stdc++.h>
-#include "print_array_recursive.cpp"
-#include "power.cpp"
+//#include "matrix.cpp"
+#include "fibonacci.cpp"
 
-using namespace std;
 typedef long long ll;
 
-int main() {
-	ll b, p, n = 10;
 
-	b = 3;
-	for(ll e = 0; e <= n; e++) {
-		p = pow(b, e);
-		printf("%lld^%lld = %lld\n",b, e, p);
+int main() {
+	/**
+	ll rows, cols;
+
+	Matrix matrixA(3, 3), matrixB(3, 3), matrixC(3, 3), matrixD(3,3);
+
+	matrixA.get_dimensions(&rows, &cols);
+
+	for(ll i= 0; i < rows; i++) {
+		for (ll j = 0; j < cols; j++) {
+			matrixA.update(1, i, j);
+		}
 	}
+
+	for(ll i= 0; i < rows; i++) {
+		for (ll j = 0; j < cols; j++) {
+			matrixB.update(2, i, j);
+		}
+	}
+
+	//matrixA.get_identity().print();
+
+	matrixA.print();
+	matrixB.print();
+	matrixC = matrixA + matrixB;
+
+	matrixC.print();
+
+	matrixD = matrixA * matrixB;
+
+	matrixD.print();
+
+	**/
+
+	for(ll i = 0; i <= 50; i++) {
+		printf("%lld\n", fibonacci(i));
+	}
+	/*
+	for(ll i = 0; i <= 50; i++) {
+		printf("%lld\n", fibonacci_linear(i));
+	}
+	*/
 
 	return 0;
 }
