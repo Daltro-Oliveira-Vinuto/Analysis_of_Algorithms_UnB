@@ -1,52 +1,21 @@
 #include <bits/stdc++.h>
-//#include "matrix.cpp"
-#include "fibonacci.cpp"
+#include "fractions.cpp"
 
-typedef long long ll;
-
+using namespace std;
 
 int main() {
-	/**
-	ll rows, cols;
+	Fraction f2(800,200);
+	Fraction f1(6,4);
+	Fraction f3;
 
-	Matrix matrixA(3, 3), matrixB(3, 3), matrixC(3, 3), matrixD(3,3);
+	cout << f1 << endl;
+	cout << f2 << endl;
 
-	matrixA.get_dimensions(&rows, &cols);
-
-	for(ll i= 0; i < rows; i++) {
-		for (ll j = 0; j < cols; j++) {
-			matrixA.update(1, i, j);
-		}
-	}
-
-	for(ll i= 0; i < rows; i++) {
-		for (ll j = 0; j < cols; j++) {
-			matrixB.update(2, i, j);
-		}
-	}
-
-	//matrixA.get_identity().print();
-
-	matrixA.print();
-	matrixB.print();
-	matrixC = matrixA + matrixB;
-
-	matrixC.print();
-
-	matrixD = matrixA * matrixB;
-
-	matrixD.print();
-
-	**/
-
-	for(ll i = 0; i <= 50; i++) {
-		printf("%lld\n", fibonacci(i));
-	}
-	/*
-	for(ll i = 0; i <= 50; i++) {
-		printf("%lld\n", fibonacci_linear(i));
-	}
-	*/
+	cout << "f1+f2: " << f1+f2 << endl;
+	cout << "f1-f2: " << f1-f2 << endl;
+	cout << "f1*f2: " << f1*f2 << endl;
+	cout << "f1/f2: " << f1/f2 << endl;
+	cout << "f1 == f2: " << (f1 == f2) << endl;
 
 	return 0;
 }
