@@ -1,21 +1,26 @@
 #include <bits/stdc++.h>
-#include "fractions.cpp"
+#include "logicGate.cpp"
 
 using namespace std;
 
 int main() {
-	Fraction f2(800,200);
-	Fraction f1(6,4);
-	Fraction f3;
+	AndGate gAnd1("and1");
+	AndGate gAnd2("and2");
+	OrGate gOr("or");
+	NotGate gNot("not");
 
-	cout << f1 << endl;
-	cout << f2 << endl;
+	gAnd1.setNextInput(0);
+	gAnd1.setNextInput(0);
+	gAnd2.setNextInput(0);
+	gAnd2.setNextInput(0);
 
-	cout << "f1+f2: " << f1+f2 << endl;
-	cout << "f1-f2: " << f1-f2 << endl;
-	cout << "f1*f2: " << f1*f2 << endl;
-	cout << "f1/f2: " << f1/f2 << endl;
-	cout << "f1 == f2: " << (f1 == f2) << endl;
+	Connector connector1(&gAnd1, &gOr);
+	Connector connector2(&gAnd2, &gOr);
+	Connector connector3(&gOr, &gNot);
+
+
+	cout << gNot.getOutput() << endl;
+
 
 	return 0;
 }
